@@ -11,6 +11,5 @@ public class Ejercicio01 {
         edad=scanner.nextInt();
         año=2021-edad;
         System.out.println("Año que naciste es "+año);
-
     }
 }

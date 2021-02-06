@@ -12,7 +12,7 @@ public class Ejercicio02 {
         invertir=scanner.nextDouble();
         System.out.print("Ingresa la cantidad de interes anual ");
         interesAnual=scanner.nextDouble();
-        System.out.print("Ingresa la cantidad de años invertir ");
+        System.out.print("Ingresa la cantidad de años ");
         años=scanner.nextInt();
         ganancias=(invertir-interesAnual)*años;
         System.out.println("Ganancias :"+ganancias);
