@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Proyecto;
 
 /**
@@ -18,7 +13,7 @@ public class Alumno extends Persona{
     }
     
     public Alumno(int anio,int materiasReprobadas,int materiasAprobadas,int matricula,
-            int edad,String nombre,String apellidoM,String apellidoP,char sexo){
+            int edad,String nombre,String apellidoM,String apellidoP,String sexo){
         super(edad,nombre,apellidoM,apellidoP,sexo);
         this.anio=anio;
         this.materiasAprobadas=materiasAprobadas;
@@ -57,8 +52,8 @@ public class Alumno extends Persona{
     public void setMatricula(int matricula) {
         this.matricula = matricula;
     }
-    
-    public String getDescripcion(){
+    @Override
+    public String toString(){
         return "Nombre: "+super.getNombre()+" "+super.getApellidoP()+" "+super.getApellidoM()
                 +"\nEdad:"+super.getEdad()+"\nSexo"+super.getSexo()+"\nMatricula: "+matricula
                 +"\nTiene "+materiasAprobadas+" materias aprobadas y "+materiasReprobadas+" materias reprobadas"

@@ -13,7 +13,7 @@ public class Empleado extends Persona{
     }
     
     public Empleado(String puesto,String grupo,int anio,int aniosDeTrabajo,Double salario,int dias,
-    int edad,String nombre,String apellidoM,String apellidoP,char sexo){
+    int edad,String nombre,String apellidoM,String apellidoP,String sexo){
         super(edad, nombre, apellidoM, apellidoP,sexo);
         this.puesto=puesto;
         this.grupo=grupo;
@@ -78,11 +78,11 @@ public class Empleado extends Persona{
             sueldo=salario*dias;
         return sueldo;
     }
-    
-    public String getDescripcion(){
+    @Override
+    public String toString(){
         return "Nombre: "+super.getNombre()+" "+super.getApellidoP()+" "+super.getApellidoM()+
                 "\nSexo:"+super.getSexo()+"\nEdad:"+super.getEdad()
                 +"\nTiene el puesto "+puesto+" en el grupo "+anio+"-"+grupo+"\nLleva trabajando "+
-                aniosDeTrabajo+" anios con un sueldo de "+sueldo;
+                aniosDeTrabajo+" anios con un sueldo de mensual de  "+sueldo;
     }
 }

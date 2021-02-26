@@ -5,12 +5,11 @@ package Proyecto;
  */
 public abstract class Persona {
     private int edad;
-    private String nombre,apellidoM,apellidoP;
-    private char sexo;
+    private String nombre,apellidoM,apellidoP,sexo;
     public Persona(){
         
     }
-    public Persona(int edad,String nombre,String apellidoM,String apellidoP,char sexo){
+    public Persona(int edad,String nombre,String apellidoM,String apellidoP,String sexo){
         this.edad=edad;
         this.nombre=nombre;
         this.apellidoM=apellidoM;
@@ -50,12 +49,13 @@ public abstract class Persona {
         this.apellidoP = apellidoP;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-    public abstract String getDescripcion();
+    @Override
+    public abstract String toString();
 }
