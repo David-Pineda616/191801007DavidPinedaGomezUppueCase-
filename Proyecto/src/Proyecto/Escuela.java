@@ -40,6 +40,7 @@ public class Escuela {
                 System.out.print("Ingresa el apellido marterno ");
                 
                 apellidoM=scanf.nextLine();
+                ///////Posible objeto  persona 
                  do{
                     System.out.print("1.-Hombre\n2.-Mujer\n3.-Personalizado\n     :");
                     opciona=scanf.nextInt();
