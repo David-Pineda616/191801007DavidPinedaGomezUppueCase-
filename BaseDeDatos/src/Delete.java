@@ -21,7 +21,7 @@ public class Delete {
             
             declaracion.setInt(1, id);
             declaracion.executeUpdate();
-            System.out.println("id eliminado...");
+            System.out.println("id eliminado");
             
             //cerrar toda conexion con la BD
             
