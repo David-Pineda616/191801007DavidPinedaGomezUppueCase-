@@ -8,9 +8,9 @@ import java.util.Date;
  * @author Pineda
  */
 public class Coneccion {
-    
+    private String SQL;
     private static final String url="jdbc:mysql://localhost/usuario",usuario="root",contrasenia="";
-	Connection conexion;
+    private Connection conexion;
     public Coneccion() throws SQLException {
         this.conexion = DriverManager.getConnection(url,usuario,contrasenia);
         
@@ -28,7 +28,7 @@ public class Coneccion {
 	declaracion.close();
     }
     public void Update(String nombre,String contrasenia,String status,int edad,int id)throws SQLException{
-        String SQL = "UPDATE usuario SET nombre = ?, contrasena = ?, status = ?, edad = ? WHERE id = ?";
+        SQL = "UPDATE usuario SET nombre = ?, contrasena = ?, status = ?, edad = ? WHERE id = ?";
         PreparedStatement declaracion = conexion.prepareStatement(SQL);
         declaracion.setString(1, nombre);
         declaracion.setString(2, contrasenia);
@@ -38,7 +38,7 @@ public class Coneccion {
         declaracion.executeUpdate(); 
     }
     public void Insert(int id,String nombre,String contrasenia,String status,int edad) throws SQLException{
-        String SQL = "INSERT INTO usuario(id,nombre,contrasena,status,fecha,edad) VALUES (?,?,?,?,?,?)";
+        SQL = "INSERT INTO usuario(id,nombre,contrasena,status,fecha,edad) VALUES (?,?,?,?,?,?)";
         PreparedStatement declaracion = conexion.prepareStatement(SQL);
         declaracion.setInt(1,id);
         declaracion.setString(2, nombre);

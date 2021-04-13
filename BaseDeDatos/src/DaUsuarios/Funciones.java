@@ -1,4 +1,5 @@
-package Conexion;
+package DaUsuarios;
+import Conexion.*;
 import java.sql.Connection;
 import java.util.Date;
 import java.util.Scanner;
@@ -8,7 +9,7 @@ import java.sql.SQLException;
  *
  * @author Pineda
  */
-public class TestFunciones {
+public class Funciones {
     public static void main(String[] args) throws SQLException{
         Scanner scanner =new Scanner(System.in);
         Coneccion conectar = new Coneccion();
